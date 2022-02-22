@@ -1,0 +1,10 @@
+--- src/cli/serve/serve.js
++++ src/cli/serve/serve.js
+@@ -138,7 +138,8 @@ function applyConfigOverrides(rawConfig, opts, extraCliOptions) {
+   set('plugins.paths', _lodash.default.compact([].concat(get('plugins.paths'), opts.pluginPath)));
+   merge(extraCliOptions);
+   merge((0, _read_keystore.readKeystore)());
+-  return rawConfig;
++  console.log("[ROR] - serve.js - intercepting config")
++  return require('../../../plugins/readonlyrestkbn/kibana/kibanaConfigInterceptor').onKibanaConfigParse(rawConfig);
+ }

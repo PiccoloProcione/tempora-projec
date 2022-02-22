@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.AccessLevel=void 0;var AccessLevel;exports.AccessLevel=AccessLevel;(function(e){e["RO_STRICT"]="ro_strict";e["RO"]="ro";e["RW"]="rw";e["ADMIN"]="admin";e["UNRESTRICTED"]="unrestricted"})(AccessLevel||(exports.AccessLevel=AccessLevel={}));

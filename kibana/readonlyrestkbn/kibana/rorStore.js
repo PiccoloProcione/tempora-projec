@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var e;var r;var u;return{setOncePkpKibanaToken:function n(t){if(r==null){r=t}},setOncePkpUrl:function n(t){if(u==null){u=t}},setOncePkpPort:function n(t){if(e==null){e=t}},getPkpKibanaToken:function n(){return r},getPkpPort:function n(){return e},getPkpUrl:function n(){return u}}}();

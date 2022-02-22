@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.exitInOneSecond=void 0;var exitInOneSecond=function e(){return setTimeout(function(){return process.exit(1)},1e3)};exports.exitInOneSecond=exitInOneSecond;

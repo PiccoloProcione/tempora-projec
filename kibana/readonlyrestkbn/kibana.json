@@ -1,0 +1,13 @@
+{
+    "id": "readonlyrestkbn",
+    "owner": {
+        "name": "Beshu Limited"
+    },
+    "version": "enterprise-1.38.0-20220221_es7.16.2",
+    "server": true,
+    "ui": true,
+    "requiredPlugins": ["navigation"],
+    "optionalPlugins": [],
+    "configPath": ["readonlyrest_kbn"],
+    "kibanaVersion": "7.16.2"
+}

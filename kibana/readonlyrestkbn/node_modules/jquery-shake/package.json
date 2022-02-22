@@ -1,0 +1,17 @@
+{
+  "name": "jquery-shake",
+  "version": "1.0.0",
+  "description": "The shake effect from jQuery UI extracted to be used as a standalone plugin.",
+  "main": "jquery.ui.shake.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElfSundae/jquery-shake.git"
+  },
+  "keywords": [
+    "jquery",
+    "shake"
+  ],
+  "author": "ninty9notout",
+  "license": "MIT",
+  "homepage": "https://github.com/ElfSundae/jquery-shake#readme"
+}

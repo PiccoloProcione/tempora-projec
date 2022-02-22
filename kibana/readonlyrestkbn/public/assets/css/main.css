@@ -1,0 +1,208 @@
+/* Copyright (C) Beshu Limited t/a ReadonlyREST Security - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Beshu Limited <info@readonlyrest.com> in London, UK
+ */
+/* ROR Logout button */
+#ror_bar_wrapper {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 0.3em 0 0 0;
+  box-shadow: 0 22px 50px 4px #000000;
+}
+.blue {
+  background-color: #3d5962;
+  background: -webkit-linear-gradient(0deg, #167da7 0%, #126880 80%, #6493a3 100%) #3d5962 no-repeat;
+  background: -moz-linear-gradient(0deg, #167da7 0%, #126880 80%, #6493a3 100%) #3d5962 no-repeat;
+  background: -ms-linear-gradient(0deg, #167da7 0%, #126880 80%, #6493a3 100%) #3d5962 no-repeat;
+  background: -o-linear-gradient(0deg, #167da7 0%, #126880 80%, #6493a3 100%) #3d5962 no-repeat;
+  background: linear-gradient(0deg, #167da7 0%, #126880 80%, #6493a3 100%) #3d5962 no-repeat;
+}
+.green {
+  background-color: #168884;
+  background: -webkit-linear-gradient(0deg, #168884 0%, #148f74 80%, #16a77e 100%) #168884 no-repeat;
+  background: -moz-linear-gradient(0deg, #168884 0%, #148f74 80%, #16a77e 100%) #168884 no-repeat;
+  background: -ms-linear-gradient(0deg, #168884 0%, #148f74 80%, #16a77e 100%) #168884 no-repeat;
+  background: -o-linear-gradient(0deg, #168884 0%, #148f74 80%, #16a77e 100%) #168884 no-repeat;
+  background: linear-gradient(0deg, #168884 0%, #148f74 80%, #16a77e 100%) #168884 no-repeat;
+}
+#ror_bar_collapsible {
+  height: 48px;
+  font-size: 1.1em;
+  position: relative;
+  color: white;
+  padding: .7em .5em .5em;
+  border-radius: 0.4em 0 0 0;
+  white-space: nowrap;
+}
+#ror_expander {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+#ror_bar {
+  height: 48px;
+  font-size: 1.1em;
+  position: relative;
+  color: white;
+  padding-top: 1em;
+  white-space: nowrap;
+}
+#ror_bar_content_wrapper {
+  margin-top: -5px;
+}
+#ror_logout {
+  white-space: nowrap;
+  padding: 0.3rem;
+  color: white;
+  /*  background-color: #e8488b;  (see kibana version specific rules) */
+  z-index: 10012;
+}
+#ror_logout img {
+  width: 1.2em;
+  margin: -9px 0 -4px 9px;
+}
+#ror_group_select {
+  color: white;
+  border: 0;
+  height: 2em;
+  margin-left: 5px;
+  border: 1px solid white;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+#ror_logout_username {
+  font-size: 110%;
+}
+/* Kibana Security plugin top-right menu */
+[data-test-subj*=userMenuButton] {
+  display: none !important;
+}
+/* ROR Kibana app */
+.container {
+  margin-top: 30px;
+}
+#rr-logo {
+  height: 40px;
+}
+.ror-footer {
+  padding: 2em;
+  font-style: italic;
+  color: #aaa;
+}
+.euiGlobalToastList {
+  bottom: 50px;
+}
+/* Hide RW controls */
+body.ror-ro [aria-label*=Edit]:not([aria-label*='Edit filter']),
+body.ror-ro [aria-label*=edit],
+body.ror-ro [aria-label*=Delete],
+body.ror-ro [aria-label*=Remove]:not([aria-label*='Remove filter']):not([data-test-subj*='fieldToggle-']),
+body.ror-ro [tooltip*=Set],
+body.ror-ro [aria-label*=Add]:not([data-test-subj*='fieldToggle']),
+body.ror-ro [aria-label*=New]:not([data-test-subj*='queryInput']),
+body.ror-ro [aria-label*=Clone],
+body.ror-ro [aria-label*=Create],
+body.ror-ro [aria-label*=Edit],
+body.ror-ro [aria-label*=Save]:not([aria-label*='Open']):not([data-test-subj*='queryInput']),
+body.ror-ro [ng-click*=edit],
+body.ror-ro [data-test-subj*=createDashboardPromptButton],
+body.ror-ro [data-test-subj*=dashboardClone],
+body.ror-ro [data-test-subj*=dashboardEditMode],
+body.ror-ro [data-test-subj*=visualizeSaveButton],
+body.ror-ro [data-test-subj*=newDashboardLink],
+body.ror-ro [data-test-subj*=create-workpad-button],
+body.ror-ro [data-test-subj*=addLayerButton],
+body.ror-ro [data-test-subj*=add-data],
+body.ror-ro [data-test-subj*=enableCollectionEnabled],
+body.ror-ro [data-test-subj*=deleteSelectedItems],
+body.ror-ro [data-test-subj*=deleteSelectedDashboards],
+body.ror-ro [data-test-subj*=newDashboardLink],
+body.ror-ro [data-test-subj*=checkboxSelectRow-],
+body.ror-ro [data-test-subj*=visualizeLandingPage] input,
+body.ror-ro [data-test-subj*=visualizeLandingPage] [aria-label*=Delete],
+body.ror-ro [data-test-subj*=newDashboardLink],
+body.ror-ro [data-test-subj*=newItemButton],
+body.ror-ro [data-test-subj*=homeAddData],
+body.ror-ro [data-test-subj*=discoverSaveButton],
+body.ror-ro [data-test-subj*=discoverNewButton],
+body.ror-ro [data-test-subj*=importButton],
+body.ror-ro .kuiButton[href='#/visualize/new'],
+body.ror-ro .kuiEmptyTablePrompt,
+body.ror-ro .euiEmptyPrompt,
+body.ror-ro #createIndexPatternReact,
+body.ror-ro #workPadTemplates,
+body.ror-ro #workpadLoader,
+body.ror-ro #management-sidenav .euiSideNavItemButton:not([data-test-subj*='reporting']),
+body.ror-ro home-app > div > div > div.euiPanel.euiPanel--paddingLarge:first-child {
+  display: none !important;
+}
+body.ror-ro button[aria-label*=Commit] {
+  cursor: default;
+  pointer-events: none;
+  background-color: lightgray;
+}
+span.nowrap {
+  white-space: nowrap;
+}
+/* Kibana version specific GUI tweaks */
+body.kbn_5 #ror_logout img {
+  margin-left: 1rem;
+}
+body.kbn_5 #ror_groups_selector {
+  margin-top: 0;
+  padding-bottom: 4rem;
+}
+body.kbn_6 {
+  /* for 6.6.0 onwards */
+}
+body.kbn_6 #ror_groups_selector {
+  margin: 0;
+}
+body.kbn_6 .global-nav__links .global-nav__links-section:last-of-type {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 46px;
+}
+body.kbn_6 .kbnGlobalNav__links .kbnGlobalNav__linksSection:last-of-type {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 46px;
+}
+body.ror_stack_management .euiSideNav [data-test-subj] {
+  display: none;
+}
+body.ror_stack_management .euiSideNav [data-test-subj*=reporting],
+body.ror_stack_management .euiSideNav [data-test-subj*=indexPatterns],
+body.ror_stack_management .euiSideNav [data-test-subj*=insightsAndAlerting],
+body.ror_stack_management .euiSideNav [data-test-subj*=kibana],
+body.ror_stack_management .euiSideNav [data-test-subj*=objects] {
+  display: block;
+}
+body.ror_stack_management .euiSideNav .euiSideNavItem--root:nth-child(2) {
+  margin-top: 0 !important;
+}
+body.ror_stack_management .euiSideNav .euiSideNavItem--root:nth-child(3) {
+  margin-top: 0 !important;
+}
+#globalHeaderBars .euiHeader:first-child {
+  padding-right: 8px;
+}
+.header__firstBar {
+  padding-right: 8px;
+}
+.header__firstBar .euiHeaderSectionItem button {
+  min-width: 48px;
+  height: 48px;
+}
+.header__firstBar .euiHeaderSectionItem button:hover {
+  background: rgba(105, 112, 125, 0.5);
+}
+.header__firstBar .euiHeaderSectionItem button:focus {
+  background: #00365a;
+}

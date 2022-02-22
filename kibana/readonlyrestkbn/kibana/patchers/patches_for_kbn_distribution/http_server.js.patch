@@ -1,0 +1,21 @@
+--- src/core/server/http/http_server.js
++++ src/core/server/http/http_server.js
+@@ -104,6 +104,7 @@
+     const serverOptions = (0, _serverHttpTools.getServerOptions)(config);
+     const listenerOptions = (0, _serverHttpTools.getListenerOptions)(config);
+     this.server = (0, _serverHttpTools.createServer)(serverOptions, listenerOptions);
++    this.server.ext('onRequest', require('../../../../plugins/readonlyrestkbn/kibana/kibanaHttpServerSecurityMiddleware').redirectToPkpMiddleware)
+     await this.server.register([_inert.default]);
+     this.config = config; // It's important to have setupRequestStateAssignment call the very first, otherwise context passing will be broken.
+     // That's the only reason why context initialization exists in this method.
+@@ -163,8 +164,8 @@
+     }
+
+     await this.server.start();
+-    const serverPath = this.config && this.config.rewriteBasePath && this.config.basePath !== undefined ? this.config.basePath : '';
+-    this.log.info(`http server running at ${this.server.info.uri}${serverPath}`);
++    const kibanaUrl = require('../../../../plugins/readonlyrestkbn/kibana/rorStore').getPkpUrl()
++    this.log.info(`http server running at ${kibanaUrl}`);
+   }
+
+   async stop() {

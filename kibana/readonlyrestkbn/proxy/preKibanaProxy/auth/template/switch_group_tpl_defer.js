@@ -1,0 +1,1 @@
+"use strict";function getSwitchGroupUrl(e){var r=e.split("redirectTo=")[1];return decodeURIComponent(unescape(r))}function redirectUser(e){window.location.href=getSwitchGroupUrl(e)}redirectUser(window.location.href);if(typeof module!=='undefined'&&module.hasOwnProperty('exports')){module.exports={getSwitchGroupUrl:getSwitchGroupUrl}}

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.getWhiteListedPaths=getWhiteListedPaths;var _defaultValues=require("../../server/defaultValues");function getWhiteListedPaths(e){var t=e===null||e===void 0?void 0:e.whitelistedPaths;return Array.isArray(t)?t:_defaultValues.DEFAULT_KIBANA_YAML_ROR_VALUES.whitelistedPaths}

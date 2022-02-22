@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.compile=compile;function compile(e,t){function r(e){var r=require.resolve(e);return require('fs').readFileSync(r,'utf8')}return r(e).replace(/\${(\w+)}/g,function(e,r){return t[r]==''||t[r]?t[r]:"${"+r+"}"})}
